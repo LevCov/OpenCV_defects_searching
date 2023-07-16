@@ -56,6 +56,6 @@ def defects_searching(filename):
     cv2.destroyAllWindows()
 
 
-defects_searching("images/2022-07-16_132310_q20_t20.png")
-#defects_searching("images/2022-07-16_132306_q20_t20.png")
-#defects_searching("images/2022-07-16_132308_q20_t20.png")
+defects_searching("2022-07-16_132310_q20_t20.png")
+#defects_searching("2022-07-16_132306_q20_t20.png")
+#defects_searching("2022-07-16_132308_q20_t20.png")
