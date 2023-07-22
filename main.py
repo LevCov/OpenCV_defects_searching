@@ -14,7 +14,8 @@ def defects_searching(filename):
 
 
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))   # Убираю пробелы в гранях
-    closed = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)
+    closed = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)    #
+    
     contours, _ = cv2.findContours(closed, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)  # Ищу контуры среди обнаруженных граней
 
     # Начинаю отсчет квадратов, треугольников и других фигур
@@ -51,8 +52,9 @@ def defects_searching(filename):
     # Изменяю размер изображения, чтобы не оно не открывалось на весь экран
     img = cv2.resize(img, (img.shape[1] // 2, img.shape[0] // 2))
 
-    cv2.imshow("Result", img)
-    cv2.waitKey(0)
+   
+    cv2.imshow("Result", img)  # Вывожу результат 
+    cv2.waitKey(0) # Ставлю неограниченное время показа результата 
     cv2.destroyAllWindows()
 
 
